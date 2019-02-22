@@ -6,9 +6,7 @@ services:
     build:
       context: ./
       dockerfile: app.dockerfile
-      # depends_on:
-      #   - database
-    # working_dir: /var/www
+    container_name: app
     links:
       - database
     volumes:
@@ -22,9 +20,7 @@ services:
     build:
       context: ./
       dockerfile: web.dockerfile
-      # depends_on: 
-      #   - app
-    # working_dir: /var/www
+    container_name: web
     volumes:
       - ./app:/var/www/app
     ports:
@@ -38,6 +34,7 @@ services:
     image: mysql:5.6
     volumes:
       - dbdata:/var/lib/mysql
+    container_name: database
     environment:
       - "MYSQL_DATABASE=homestead"
       - "MYSQL_USER=homestead"
