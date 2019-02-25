@@ -12,3 +12,6 @@ app/npm-debug.log
 app/yarn-error.log
 app/.env
 app/.phpunit.result.cache
+
+# Add isso apos fazer a configuração
+# .env
