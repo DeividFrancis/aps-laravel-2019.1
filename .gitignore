@@ -14,4 +14,4 @@ app/.env
 app/.phpunit.result.cache
 
 # Add isso apos fazer a configuração
-# .env
+.env
