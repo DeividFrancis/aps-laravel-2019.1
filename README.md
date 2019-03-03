@@ -20,7 +20,7 @@ git clone -b 5.6 https://github.com/laravel/laravel.git app
 Com esse metodo não precisa ter o compose instalado nem o php se pa
 
 ```
-docker run --rm -v $(pwd)/app:/app composer install
+docker run --rm -v $(pwd)/api:/app composer install
 ```
 
 ### 3 - Build no projeto

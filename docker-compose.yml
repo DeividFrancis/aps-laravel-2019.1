@@ -2,13 +2,13 @@ version: '3'
 services:
 
   # The Application
-  app:
+  api:
     build:
       context: ./
-      dockerfile: app.dockerfile
-    container_name: ${APP_NAME}-app
+      dockerfile: api.dockerfile
+    container_name: ${APP_NAME}-api
     volumes:
-      - ./app:/var/www
+      - ./api:/var/www
     env_file:
       - .env
     networks:
@@ -17,15 +17,13 @@ services:
           ipv4_address: 172.28.1.1
   # The Web Server
   web:
-    build:
-      context: ./
-      dockerfile: web.dockerfile
+    image: nginx
     container_name: ${APP_NAME}-web
     volumes:
-      # - ./app.conf:/etc/nginx/conf.d/default.conf
-      - ./app:/var/www/
+      - ./web.conf:/etc/nginx/conf.d/default.conf
+      - ./api:/var/www/
     ports:
-      - 8080:80
+      - 80:80
     networks:
       - frontend
 
@@ -40,7 +38,7 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=${DB_DATABASE}
     ports:
-      - "${DB_PORT}:5432"
+      - "5432:5432"
     networks:
       database:
         ipv4_address: 172.28.1.3
