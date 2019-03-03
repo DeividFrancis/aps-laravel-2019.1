@@ -20,4 +20,4 @@ RUN apt-get install -y libpq-dev \
 #     php7.2-common \
 #     php7.2-xml
 RUN docker-php-ext-install pdo pdo_pgsql
-RUN chmod 777 -R /var/www
+RUN chmod 777 -R /var/www/
