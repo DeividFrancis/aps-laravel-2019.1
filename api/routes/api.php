@@ -15,7 +15,9 @@ Route::group(array('prefix' =>'v1'), function(){
    Route::get('/', function () {
       return response()->json(['message' => 'API Laravel', 'status' => 'Conectado']);
    });
+   Route::post('auth/login', 'AuthController@authenticate');
    Route::resource('unidade', 'UnidadesController');
+   Route::resource('pessoa', 'PessoasController');
 });
 
 
