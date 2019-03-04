@@ -16,19 +16,18 @@ class AuthController extends Controller
         // Get user by email
         $pessoa = Pessoa::where('cpfCnpj', $credenciais['cpfCnpj'])->first();
 
-//        // Validate Pessoa
+        // Validate Pessoa
         if(!$pessoa) {
             return response()->json([
-                'error' => 'Invalid credentials'
-            ], 401);
+                'error' => 'Usúario ou senha invalidos'
+            ], 403);
         }
-//
-//        // Validate Password
-//        if (!Hash::check($credentials['password'], $company->password)) {
-//            return response()->json([
-//                'error' => 'Invalid credentials'
-//            ], 401);
-//        }
+        // Validate Password
+        if (!Hash::check($credenciais['senha'], $pessoa->senha)) {
+            return response()->json([
+                'error' => 'Usúario ou senha invalidos'
+            ], 403);
+        }
         $token = JWTAuth::fromUser($pessoa);
 
         $objToken = JWTAuth::setToken($token);

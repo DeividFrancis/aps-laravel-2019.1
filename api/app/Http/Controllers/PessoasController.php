@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pessoa;
-
+use Hash;
 class PessoasController extends Controller
 {
     /**
@@ -38,6 +38,7 @@ class PessoasController extends Controller
     {
         $pessoa = new Pessoa();
         $pessoa->fill($request->all());
+        $pessoa->senha = Hash::make($request->senha);
         $pessoa->save();
         return response()->json($pessoa, 201);
     }
@@ -84,6 +85,7 @@ class PessoasController extends Controller
         }
 
         $pessoa->fill($request->all());
+        $pessoa->senha = Hash::make($request->senha);
         $pessoa->save();
         return response()->json($pessoa);
     }
