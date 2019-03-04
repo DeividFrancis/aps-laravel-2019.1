@@ -22,14 +22,18 @@ class CreatePessoasTable extends Migration
                 ->on('unidades')
                 ->onDelete('cascade');
             $table->string($prefix.'nomerazao');
-            $table->string($prefix.'cpfCnpj');
-            $table->string($prefix.'senha')->nullable();
-            $table->string($prefix.'ie')->nullable();
-            $table->string($prefix.'cep')->nullable();
-            $table->string($prefix.'email1')->nullable();
-            $table->string($prefix.'email2')->nullable();
+            $table->string($prefix.'apelidofantasia')->nullable();
             $table->string($prefix.'telefone1')->nullable();
             $table->string($prefix.'telefone2')->nullable();
+            $table->string($prefix.'email1')->nullable();
+            $table->string($prefix.'email2')->nullable();
+            $table->string($prefix.'logradouro')->nullable();
+            $table->string($prefix.'cep')->nullable();
+            $table->string($prefix.'cpfCnpj');
+            $table->string($prefix.'ie')->nullable();
+            $table->string($prefix.'RG')->nullable();
+            $table->string($prefix.'usuario')->nullable();
+            $table->string($prefix.'senha')->nullable();
             $table->integer($prefix.'principal')->nullable();
             $table->timestamps();
             $table->softDeletes();

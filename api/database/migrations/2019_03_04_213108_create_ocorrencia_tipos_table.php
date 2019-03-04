@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUnidadesTable extends Migration
+class CreateOcorrenciaTiposTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateUnidadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('unidades', function (Blueprint $table) {
-            $prefix = "";
-            $table->increments($prefix.'id');
-            $table->string($prefix.'descricao');
+        Schema::create('ocorrencia_tipos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string("descricao");
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateUnidadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unidades');
+        Schema::dropIfExists('ocorrencia_tipos');
     }
 }

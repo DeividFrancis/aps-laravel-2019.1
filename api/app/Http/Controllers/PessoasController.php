@@ -51,7 +51,16 @@ class PessoasController extends Controller
      */
     public function show($id)
     {
-        //
+        $pessoa = Pessoa::find($id);
+        if(!$pessoa){
+            return response()->json([
+                "error" => [
+                    "descricao" => "Pessoa não encontrada"
+                ]
+            ]);
+        }
+
+        return response()->json($pessoa);
     }
 
     /**
@@ -98,6 +107,16 @@ class PessoasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pessoa = Pessoa::find($id);
+        if (!$pessoa) {
+            return response()->json([
+                'error' => [
+                    'descricao' => 'Pessoa não encontrada',
+                    'message' => []
+                ]
+            ]);
+        }
+        $pessoa->delete();
+        return response()->json(["descricao" => "Pessoa deletada com sucesso"]);
     }
 }

@@ -13,8 +13,7 @@ class UnidadesTableSeeder extends Seeder
     public function run()
     {
         DB::table('unidades')->insert([
-            'descricao' => 'Fazenda do seu zé',
-            'cpfCnpj' => '555.112.602-15'
+            'descricao' => 'Unidade Mestre',
         ]);
     }
 }

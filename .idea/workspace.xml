@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d1f3f38-a89f-4fa6-90f5-eecf4276bf05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/AuthController.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/bootstrap/cache/packages.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/bootstrap/cache/services.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/framework/sessions/790WMddHFCZLXeqhPe1AjhSDI1XBzLjEaY0TCGMa" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/framework/sessions/villZyaePopW6dfJ86CHXqcpP850NgxdQCa01ol2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/framework/views/7bdeb8b0c526bafc45b4cf9183b44ebc3b0f0478.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/framework/views/a4c5dc594cb4ed73c3cc667cc348d87139a14d63.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/framework/views/beafc1ea6ba3b1c45604098b20ce357eac86e9d6.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/framework/views/c6d615eb91fe3a0edd449165e94d034703bbb84d.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/framework/views/db4b9232a3b0957f912084f26d9041e8a510bd6c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/storage/logs/laravel.log" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/doc/agrobov.sql" afterPath="$PROJECT_DIR$/dump/agrobov.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Diagrama.png" afterPath="$PROJECT_DIR$/doc/Diagrama.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MAKE-API.md" afterPath="$PROJECT_DIR$/MAKE-API.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Http/Controllers/PessoasController.php" afterPath="$PROJECT_DIR$/api/app/Http/Controllers/PessoasController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/app/Unidade.php" afterPath="$PROJECT_DIR$/api/app/Unidade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/database/migrations/2019_03_03_010045_create_unidades_table.php" afterPath="$PROJECT_DIR$/api/database/migrations/2019_03_03_010045_create_unidades_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/database/migrations/2019_03_03_130134_create_pessoas_table.php" afterPath="$PROJECT_DIR$/api/database/migrations/2019_03_03_130134_create_pessoas_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/database/seeds/UnidadesTableSeeder.php" afterPath="$PROJECT_DIR$/api/database/seeds/UnidadesTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/agrobov.pdb" afterPath="$PROJECT_DIR$/doc/agrobov.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/agrobov.pdm" afterPath="$PROJECT_DIR$/doc/agrobov.pdm" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,67 +34,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/Http/Kernel.php">
+      <file leaf-file-name="2019_03_04_213000_create_animais_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213000_create_animais_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
+            <state relative-caret-position="-46">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/AuthController.php">
+      <file leaf-file-name="2019_03_04_213020_create_parentescos_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213020_create_parentescos_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="21" column="55" lean-forward="true" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-              <folding>
-                <element signature="e#40#55#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pessoa.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/Pessoa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-              <folding>
-                <element signature="e#23#62#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PessoasController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/PessoasController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-              <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api.dockerfile">
+      <file leaf-file-name="2019_03_04_213129_create_ocorrencias_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213129_create_ocorrencias_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnidadesTableSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/seeds/UnidadesTableSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#38#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PessoasTableSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/seeds/PessoasTableSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <folding>
+                <element signature="e#7#38#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_03_03_010045_create_unidades_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_03_010045_create_unidades_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-285">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PessoasController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/PessoasController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="96" column="53" lean-forward="true" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_03_04_213108_create_ocorrencia_tipos_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213108_create_ocorrencia_tipos_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_03_03_130134_create_pessoas_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_03_130134_create_pessoas_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -86,7 +144,11 @@
     <findStrings>
       <find>user</find>
       <find>table</find>
+      <find>NUMERO</find>
     </findStrings>
+    <replaceStrings>
+      <replace>NUMERIC</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,16 +156,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/app/Unidade.php" />
-        <option value="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/api/database/seeds/UnidadesTableSeeder.php" />
-        <option value="$PROJECT_DIR$/MAKE-API.md" />
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/UnidadesController.php" />
         <option value="$PROJECT_DIR$/api/composer.json" />
-        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_03_010045_create_unidades_table.php" />
         <option value="$PROJECT_DIR$/api/config/app.php" />
         <option value="$PROJECT_DIR$/api/config/jwt.php" />
-        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_03_130134_create_pessoas_table.php" />
         <option value="$PROJECT_DIR$/api/config/auth.php" />
         <option value="$PROJECT_DIR$/api.dockerfile" />
         <option value="$PROJECT_DIR$/api/app/Http/Kernel.php" />
@@ -112,6 +168,23 @@
         <option value="$PROJECT_DIR$/api/app/Pessoa.php" />
         <option value="$PROJECT_DIR$/api/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/db.dockerfile" />
+        <option value="$PROJECT_DIR$/dump/agrobov.sql" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/api/app/Unidade.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_03_010045_create_unidades_table.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_03_130134_create_pessoas_table.php" />
+        <option value="$PROJECT_DIR$/MAKE-API.md" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_04_213000_create_animais_table.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_04_213020_create_parentescos_table.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_04_213056_create_ocorrencias_table.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_04_213108_create_ocorrencia_tipos_table.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_04_213119_create_vacinas_table.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_04_213128_create_situacoes_table.php" />
+        <option value="$PROJECT_DIR$/api/database/migrations/2019_03_04_213129_create_ocorrencias_table.php" />
+        <option value="$PROJECT_DIR$/api/database/seeds/UnidadesTableSeeder.php" />
+        <option value="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/api/database/seeds/PessoasTableSeeder.php" />
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/PessoasController.php" />
       </list>
     </option>
@@ -164,6 +237,21 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="laravel_api" type="cbb8eebc:String" user="laravel_api" />
               <item name="api" type="cbb8eebc:String" user="api" />
+              <item name="app" type="cbb8eebc:String" user="app" />
+              <item name="Http" type="cbb8eebc:String" user="Http" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="laravel_api" type="cbb8eebc:String" user="laravel_api" />
+              <item name="api" type="cbb8eebc:String" user="api" />
+              <item name="app" type="cbb8eebc:String" user="app" />
+              <item name="Http" type="cbb8eebc:String" user="Http" />
+              <item name="Controllers" type="cbb8eebc:String" user="Controllers" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="laravel_api" type="cbb8eebc:String" user="laravel_api" />
+              <item name="api" type="cbb8eebc:String" user="api" />
               <item name="database" type="cbb8eebc:String" user="database" />
             </path>
             <path>
@@ -177,7 +265,8 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="laravel_api" type="cbb8eebc:String" user="laravel_api" />
               <item name="api" type="cbb8eebc:String" user="api" />
-              <item name="routes" type="cbb8eebc:String" user="routes" />
+              <item name="database" type="cbb8eebc:String" user="database" />
+              <item name="seeds" type="cbb8eebc:String" user="seeds" />
             </path>
           </expand>
           <select />
@@ -221,6 +310,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dump" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$" />
@@ -249,12 +341,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551565933298</updated>
       <workItem from="1551565934666" duration="28268000" />
-      <workItem from="1551669099843" duration="6879000" />
+      <workItem from="1551669099843" duration="14894000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35147000" />
+    <option name="totallyTimeSpent" value="43162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="718" extended-state="6" />
@@ -319,37 +411,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/gugu.php" />
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/database/seeds/UnidadesTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MAKE-API.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="343">
-            <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -418,7 +479,7 @@
         <state relative-caret-position="276">
           <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
-            <element signature="e#40#85#0#PHP" expanded="true" />
+            <element signature="e#40#85#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -463,14 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/Unidade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -506,22 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_03_010045_create_unidades_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api.dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -536,7 +573,7 @@
     <entry file="file://$PROJECT_DIR$/api/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
-          <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
+          <caret line="62" column="66" lean-forward="false" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -557,38 +594,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_03_130134_create_pessoas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Exceptions/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
           <folding>
-            <element signature="e#34#48#0#PHP" expanded="true" />
+            <element signature="e#34#48#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Pessoa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
+            <element signature="e#23#62#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -596,20 +617,182 @@
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="21" column="55" lean-forward="true" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
           <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
+            <element signature="e#40#55#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="18" column="62" lean-forward="false" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dump/agrobov.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="85" column="54" lean-forward="true" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/Diagrama.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Unidade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MAKE-API.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="159">
+            <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/Animal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213128_create_situacoes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213119_create_vacinas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213108_create_ocorrencia_tipos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213020_create_parentescos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213129_create_ocorrencias_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/UnidadesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/Controllers/PessoasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+        <state relative-caret-position="244">
+          <caret line="96" column="53" lean-forward="true" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/seeds/PessoasTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
+            <element signature="e#7#38#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_03_010045_create_unidades_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_03_130134_create_pessoas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database/migrations/2019_03_04_213000_create_animais_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
