@@ -2,12 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UnidadeRequest;
+use App\MyLibs\Status;
+use App\MyLibs\Utils;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Unidade;
 use Mockery\Exception;
+use App\MyLibs\ModelUtils;
 
 class UnidadesController extends Controller
 {
+
+    public function unidadeValidator(Request $request)
+    {
+        $rules = [
+            "descricao" => "required|max:2"
+        ];
+        $validator = Validator::make($request->all(), $rules);
+        return $validator;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +30,7 @@ class UnidadesController extends Controller
      */
     public function index()
     {
-        return response()->json(Unidade::all());
+        return Utils::responseJson(Status::SUCCESS(), Unidade::all());
     }
 
     /**
@@ -36,6 +51,11 @@ class UnidadesController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = $this->unidadeValidator($request);
+        if ($validator->fails()) {
+            return Utils::responseJson(Status::ErrorValidate(), $validator->messages()->first());
+        }
+
         $unidade = new Unidade();
         $unidade->fill($request->all());
         $unidade->save();
@@ -50,14 +70,7 @@ class UnidadesController extends Controller
      */
     public function show($id)
     {
-        $unidade = Unidade::find($id);
-        if (!$unidade) {
-            return response()->json([
-                "message" => "Unidade não encontrada"
-            ], 404);
-        }
-
-        return response()->json($unidade);
+        return ModelUtils::findDB(Unidade::class, $id);
     }
 
     /**
@@ -87,7 +100,7 @@ class UnidadesController extends Controller
 
             return response()->json($unidade);
         } catch (Exception $e) {
-           return response()->json([
+            return response()->json([
                 "message" => "Erro ao durante opecação",
                 "execption" => $e
             ], 400);
@@ -103,7 +116,7 @@ class UnidadesController extends Controller
     public function destroy($id)
     {
         $unidade = Unidade::find($id);
-        if(!$unidade){
+        if (!$unidade) {
             return response()->json([
                 "message" => "Unidade não encontrada"
             ]);
