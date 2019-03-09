@@ -2,20 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UnidadeRequest;
 use App\MyLibs\Status;
 use App\MyLibs\Utils;
-use Hamcrest\Util;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Unidade;
+use Mockery\Exception;
 use App\MyLibs\ModelUtils;
-use App\MyLibs\ErrorException;
-use Exception;
 
 class UnidadesController extends Controller
 {
-    protected $rules = [
-        "descricao" => "required|max:50"
-    ];
+
+    public function unidadeValidator(Request $request)
+    {
+        $rules = [
+            "descricao" => "required|max:2"
+        ];
+        $validator = Validator::make($request->all(), $rules);
+        return $validator;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -44,15 +51,15 @@ class UnidadesController extends Controller
      */
     public function store(Request $request)
     {
-        try{
-            Utils::validator($request, $this->rules);
-        }catch (ErrorException $e){
-            return $e->getResponseJson();
+        $validator = $this->unidadeValidator($request);
+        if ($validator->fails()) {
+            return Utils::responseJson(Status::ErrorValidate(), $validator->messages()->first());
         }
+
         $unidade = new Unidade();
         $unidade->fill($request->all());
         $unidade->save();
-        return Utils::responseJson(Status::SUCCESS(), $unidade);
+        return response()->json($unidade, 201);
     }
 
     /**
@@ -63,12 +70,7 @@ class UnidadesController extends Controller
      */
     public function show($id)
     {
-        try{
-            $unidade = ModelUtils::find(Unidade::class, $id);
-            return Utils::responseJson(Status::SUCCESS(), $unidade);
-        }catch (ErrorException $e){
-            return $e->getResponseJson();
-        }
+        return ModelUtils::findDB(Unidade::class, $id);
     }
 
     /**
@@ -91,11 +93,6 @@ class UnidadesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        try{
-            Utils::validator($request, $this->rules);
-        }catch (ErrorException $e){
-            return $e->getResponseJson();
-        }
         try {
             $unidade = Unidade::findOrFail($id);
             $unidade->fill($request->all());
@@ -103,7 +100,10 @@ class UnidadesController extends Controller
 
             return response()->json($unidade);
         } catch (Exception $e) {
-            return Utils::responseJson(Status::ERRO(), $e->getMessage());
+            return response()->json([
+                "message" => "Erro ao durante opecação",
+                "execption" => $e
+            ], 400);
         }
     }
 
@@ -117,10 +117,12 @@ class UnidadesController extends Controller
     {
         $unidade = Unidade::find($id);
         if (!$unidade) {
-            return ModelUtils::findDB(Unidade::class, $id);
+            return response()->json([
+                "message" => "Unidade não encontrada"
+            ]);
         }
 
         $unidade->delete();
-        return Utils::responseJson(Status::SUCCESS(), "Deletado com sucesso");
+        return response()->json(["message" => "Deletado com sucesso"], 201);
     }
 }
