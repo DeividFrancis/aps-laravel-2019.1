@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\MyLibs\Status;
+use App\MyLibs\Utils;
 use App\Pessoa;
 use Illuminate\Http\Request;
 use JWTAuth;
@@ -9,6 +11,10 @@ use Hash;
 
 class AuthController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function authenticate(Request $request){
 
         $credenciais = $request->only('cpfCnpj', 'senha');
@@ -18,17 +24,14 @@ class AuthController extends Controller
 
         // Validate Pessoa
         if(!$pessoa) {
-            return response()->json([
-                'error' => 'Usúario ou senha invalidos'
-            ], 403);
+            return Utils::responseJson(Status::ERRO(), "Usúario ou senha invalidos");
         }
         // Validate Password
         if (!Hash::check($credenciais['senha'], $pessoa->senha)) {
-            return response()->json([
-                'error' => 'Usúario ou senha invalidos'
-            ], 403);
+            return Utils::responseJson(Status::ERRO(), "Usúario ou senha invalidos");
         }
-        $token = JWTAuth::fromUser($pessoa);
+        $customClains = ["role" => "ADMIN"];
+        $token = JWTAuth::fromUser($pessoa, $customClains);
 
         $objToken = JWTAuth::setToken($token);
         return response()->json([

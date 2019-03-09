@@ -13,8 +13,17 @@ services:
       - .env
     networks:
       frontend:
+      cache:
       database:
           ipv4_address: 172.28.1.1
+  # The cache server
+  redis:
+    image: redis
+    container_name: ${APP_NAME}-cache
+    expose:
+      - 6379
+    networks:
+      - cache
   # The Web Server
   web:
     image: nginx
@@ -48,6 +57,7 @@ volumes:
 
 networks:
     frontend:
+    cache:
     database:
         ipam:
             driver: default

@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Animal;
+use App\MyLibs\Status;
+use App\MyLibs\Utils;
 use Illuminate\Http\Request;
+//use Tymon\JWTAuth\JWTAuth;
+use JWTAuth;
 
 class AnimaisController extends Controller
 {
@@ -13,7 +18,12 @@ class AnimaisController extends Controller
      */
     public function index()
     {
-        //
+//        $token = JWTAuth::parseToken();
+        $uniId = \Auth::user()->unidade_id;
+        $animais = Animal::where("unidade_id", $uniId);
+        $animais = !$animais ? $animais : [];
+//        var_dump($token);
+        return Utils::responseJson(Status::SUCCESS(), $animais);
     }
 
     /**
@@ -34,7 +44,16 @@ class AnimaisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pessoa = \Auth::user();
+        $uniId = $pessoa->unidade_id;
+        $pesId = $pessoa->id;
+
+        $animal = new Animal();
+        $animal->fill($request->all());
+        $animal->unidade_id = $uniId;
+        $animal->pessoa_id = $pesId;
+        $animal->save();
+        return Utils::responseJson(Status::Created(), $animal);
     }
 
     /**

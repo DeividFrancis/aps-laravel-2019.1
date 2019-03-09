@@ -19,6 +19,7 @@ Route::group(array('prefix' =>'v1'), function(){
     Route::group([ 'middleware' => ['jwt.auth']], function (){
        Route::resource('unidade', 'UnidadesController');
        Route::resource('pessoa', 'PessoasController');
+       Route::resource('animal', 'AnimaisController');
    });
 });
 
