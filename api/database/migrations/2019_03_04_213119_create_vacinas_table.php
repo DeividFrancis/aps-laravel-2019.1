@@ -15,7 +15,20 @@ class CreateVacinasTable extends Migration
     {
         Schema::create('vacinas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("descricao");
+            $table->integer('unidade_id')->unsigned();
+            $table->foreign('unidade_id')->references("id")->on('unidades');
+
+            $table->integer('pessoa_id')->unsigned();
+            $table->foreign('pessoa_id')->references("id")->on('pessoas');
+
+            $table->integer('animal_id')->unsigned();
+            $table->foreign('animal_id')->references("id")->on('animais');
+
+            $table->integer('vacina_tipo_id')->unsigned();
+            $table->foreign('vacina_tipo_id')->references("id")->on('vacina_tipos');
+
+            $table->date('data')->unsigned();
+
             $table->timestamps();
         });
     }

@@ -2,45 +2,42 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PessoasRequest;
 use Illuminate\Http\Request;
 use App\Pessoa;
 use Hash;
+
+/**
+ * @property Pessoa pessoa
+ */
 class PessoasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct(Pessoa $pessoa)
+    {
+        $this->pessoa = $pessoa;
+    }
+
     public function index()
     {
-        $pessoa = Pessoa::all();
-        return response()->json($pessoa);
+        $pessoa = $this->pessoa->all();
+        return response()->api($pessoa);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function store(PessoasRequest $request)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+        $pessoaExist = Pessoa::where("cpfCnpj", "=", $request->input("cpfCnpj"))->first();
+        if($pessoaExist != null){
+            throw new \Exception("Pessoa com o cpf {$pessoaExist->cpfCnpj} já cadastrada.");
+        }
+        $request->validated();
         $pessoa = new Pessoa();
         $pessoa->fill($request->all());
-        $pessoa->senha = Hash::make($request->senha);
+        if($request->input('senha') != null ){
+            $pessoa->usuario = 1;
+            $pessoa->senha = Hash::make($request->input('senha'));
+        }
+        $pessoa->principal = 0;
         $pessoa->save();
-        return response()->json($pessoa, 201);
+        return response()->api($pessoa);
     }
 
     /**
@@ -61,17 +58,6 @@ class PessoasController extends Controller
         }
 
         return response()->json($pessoa);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**

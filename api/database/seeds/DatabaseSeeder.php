@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         $this->call([
             UnidadesTableSeeder::class,
-            PessoasTableSeeder::class
+            PessoasTableSeeder::class,
+            VacinaTiposTableSeeder::class,
         ]);
     }
 }

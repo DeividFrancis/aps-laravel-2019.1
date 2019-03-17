@@ -26,11 +26,11 @@ class CreateAnimaisTable extends Migration
                 ->references("id")
                 ->on("pessoas")
                 ->onDelete("cascade");
-            $table->string("descricao");
+            $table->string("descricao")->nullable();
             $table->string("codigo");
             $table->date("nascimento");
-            $table->date("obito");
-            $table->string("observacao");
+            $table->date("obito")->nullable();
+            $table->string("observacao")->nullable();
             $table->string("sexo");
             $table->timestamps();
         });

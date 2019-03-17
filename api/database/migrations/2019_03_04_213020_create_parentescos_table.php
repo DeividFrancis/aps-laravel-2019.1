@@ -20,15 +20,13 @@ class CreateParentescosTable extends Migration
                 ->unsigned();
             $table->foreign("pai_id")
                 ->references("id")
-                ->on("animais")
-                ->onDelete("cascade");
+                ->on("animais");
             $table->integer("mae_id")
                 ->nullable()
                 ->unsigned();
             $table->foreign("mae_id")
                 ->references("id")
-                ->on("animais")
-                ->onDelete("cascade");
+                ->on("animais");
             $table->timestamps();
         });
     }

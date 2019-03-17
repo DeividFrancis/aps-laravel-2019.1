@@ -30,7 +30,7 @@ class AuthController extends Controller
         if (!Hash::check($credenciais['senha'], $pessoa->senha)) {
             return Utils::responseJson(Status::ERRO(), "Usúario ou senha invalidos");
         }
-        $customClains = ["role" => "ADMIN"];
+        $customClains = ["uni_id" => $pessoa->unidade_id];
         $token = JWTAuth::fromUser($pessoa, $customClains);
 
         $objToken = JWTAuth::setToken($token);

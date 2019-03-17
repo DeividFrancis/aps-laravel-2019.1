@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Dingo\Api\Http\FormRequest;
+use Illuminate\Foundation\Http\FormRequest;
 
-class UnidadeRequest extends FormRequest
+class VacinasRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class UnidadeRequest extends FormRequest
     public function rules()
     {
         return [
-            "descricao" => "required"
+            "descricao" => "required|string"
         ];
     }
 }
